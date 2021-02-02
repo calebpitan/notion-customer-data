@@ -1,8 +1,8 @@
 import React from "react";
 const Display = (props) => {
-  return props.list.map((person) => {
+  return props.list.map((person, i) => {
     return (
-      <div className=" ui cards">
+      <div className=" ui cards" key={i}>
         <div className="card">
           <div className="ui">
             <div className="header">
@@ -11,9 +11,7 @@ const Display = (props) => {
             <div className="header">{person.Email}</div>
             <div className="header">{person.PhoneNumber}</div>
             <div className="meta">{person.Gender}</div>
-            <div className="meta">
-              {person.URL}
-            </div>
+            <div className="meta">{person.URL}</div>
             <div className="meta">
               {person.Longitude + "," + person.Latitude}
             </div>
